@@ -12,6 +12,8 @@ import {
   MantineTheme,
 } from '@mantine/core';
 
+import { useStore } from 'store';
+
 export type Route = {
   element: React.FC;
   path: string;
@@ -61,53 +63,57 @@ export const AppShell: React.FC<AppShellProps> = ({
   colorScheme,
   navLinks,
   routes,
-}) => (
-  <BrowserRouter>
-    <MantineProvider
-      withGlobalStyles
-      withNormalizeCSS
-      theme={{
-        colorScheme,
-      }}
-    >
-      <MantineAppShell
-        padding='md'
-        navbar={
-          <Navbar width={{ base: 300 }} height={500} p='xs'>
-            {navLinks.map((link) => (
-              <MainLink {...link} key={link.path} />
-            ))}
-          </Navbar>
-        }
-        header={
-          <Header
-            height={60}
-            p='xs'
-            sx={{ display: 'flex' }}
-            styles={(theme: MantineTheme) => ({
-              main: {
-                backgroundColor:
-                  theme.colorScheme === 'dark'
-                    ? theme.colors.dark[8]
-                    : theme.colors.gray[0],
-              },
-            })}
-          >
-            <Title>{title}</Title>
-          </Header>
-        }
+}) => {
+  const { musics } = useStore();
+  return (
+    <BrowserRouter>
+      <MantineProvider
+        withGlobalStyles
+        withNormalizeCSS
+        theme={{
+          colorScheme,
+        }}
       >
-        <Routes>
-          {routes.map((route) => (
-            <Route
-              key={route.path}
-              path={route.path}
-              element={<route.element />}
-            />
-          ))}
-        </Routes>
-        <Outlet />
-      </MantineAppShell>
-    </MantineProvider>
-  </BrowserRouter>
-);
+        <MantineAppShell
+          padding='md'
+          navbar={
+            <Navbar width={{ base: 300 }} height={500} p='xs'>
+              {navLinks.map((link) => (
+                <MainLink {...link} key={link.path} />
+              ))}
+            </Navbar>
+          }
+          header={
+            <Header
+              height={60}
+              p='xs'
+              sx={{ display: 'flex' }}
+              styles={(theme: MantineTheme) => ({
+                main: {
+                  backgroundColor:
+                    theme.colorScheme === 'dark'
+                      ? theme.colors.dark[8]
+                      : theme.colors.gray[0],
+                },
+              })}
+            >
+              <Title sx={{ flexGrow: 1 }}>{title}</Title>
+              <Text size='xl'>{musics.length} selected</Text>
+            </Header>
+          }
+        >
+          <Routes>
+            {routes.map((route) => (
+              <Route
+                key={route.path}
+                path={route.path}
+                element={<route.element />}
+              />
+            ))}
+          </Routes>
+          <Outlet />
+        </MantineAppShell>
+      </MantineProvider>
+    </BrowserRouter>
+  );
+};
