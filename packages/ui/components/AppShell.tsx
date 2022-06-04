@@ -77,7 +77,7 @@ export const AppShell: React.FC<AppShellProps> = ({
         <MantineAppShell
           padding='md'
           navbar={
-            <Navbar width={{ base: 300 }} height={500} p='xs'>
+            <Navbar width={{ base: 300 }} height='auto' p='xs'>
               {navLinks.map((link) => (
                 <MainLink {...link} key={link.path} />
               ))}
