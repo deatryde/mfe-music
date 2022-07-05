@@ -16,7 +16,8 @@ export const PlaylistContent: FC<PlaylistContent> = ({ musics }) => {
       <Grid
         mt={20}
         sx={{
-          gap: '1rem',
+          justifyContent: 'center',
+          gap: '2rem',
         }}
       >
         {musics.map((music) => (

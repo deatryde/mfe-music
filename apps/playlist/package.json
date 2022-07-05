@@ -5,6 +5,17 @@
   "dependencies": {
     "@mantine/core": "^4.2.7",
     "@mantine/hooks": "^4.2.7",
+    "axios": "^0.27.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-query": "^3.39.1",
+    "react-scripts": "5.0.1",
+    "store": "workspace:*",
+    "ui": "workspace:*",
+    "tsconfig": "workspace:*",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -12,21 +23,13 @@
     "@types/node": "^16.11.38",
     "@types/react": "^18.0.11",
     "@types/react-dom": "^18.0.5",
-    "axios": "^0.27.2",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-query": "^3.39.1",
-    "react-scripts": "5.0.1",
-    "tsconfig": "workspace:*",
-    "typescript": "^4.7.3",
-    "ui": "workspace:*",
-    "store": "workspace:*",
-    "web-vitals": "^2.1.4"
+    "@craco/craco": "^6.4.4",
+    "typescript": "^4.7.3"
   },
   "scripts": {
-    "dev": "SET PORT=3001 && react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "dev": "SET PORT=3001 && craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

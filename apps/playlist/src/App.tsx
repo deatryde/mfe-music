@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppShell } from 'ui';
-import MusicPage from './pages/MusicPage';
+import MusicPage from 'music/Music';
 
 import PlaylistPage from './pages/PlaylistPage';
 

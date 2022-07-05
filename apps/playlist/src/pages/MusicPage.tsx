@@ -8,7 +8,7 @@ async function fetchMusic() {
   return data.albums.album;
 }
 
-const MusicPage: React.FC = () => {
+const MusicPage = () => {
   const { data, isError, isLoading } = useQuery('albums', fetchMusic);
 
   return (

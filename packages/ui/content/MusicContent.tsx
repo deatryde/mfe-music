@@ -27,13 +27,13 @@ export const MusicContent: FC<MusicContentProps> = ({
 
   return (
     <React.Fragment>
-      <Title> Musics</Title>
+      <Title> Music </Title>
 
       <Grid
+        mt={20}
         sx={{
           justifyContent: 'center',
           gap: '2rem',
-          marginTop: 12,
         }}
       >
         {data.map((album: AlbumInterface) => (
