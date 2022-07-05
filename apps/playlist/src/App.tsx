@@ -1,8 +1,37 @@
 import React from 'react';
 import { AppShell } from 'ui';
-import MusicPage from 'music/Music';
-
 import PlaylistPage from './pages/PlaylistPage';
+import MusicPage from './pages/MusicPage';
+
+const MusicRuntime = React.lazy(() => import('music/Music'));
+
+class ErrorBoundary extends React.Component<
+  {
+    children: React.ReactNode;
+  },
+  {
+    hasError: boolean;
+  }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch() {}
+
+  render() {
+    if (this.state.hasError) {
+      return <MusicPage />;
+    }
+
+    return this.props.children;
+  }
+}
 
 const App = () => {
   return (
@@ -20,7 +49,14 @@ const App = () => {
         },
       ]}
       routes={[
-        { path: '/', element: () => <MusicPage /> },
+        {
+          path: '/',
+          element: () => (
+            <ErrorBoundary>
+              <MusicRuntime />
+            </ErrorBoundary>
+          ),
+        },
         { path: '/playlist', element: () => <PlaylistPage /> },
       ]}
     />

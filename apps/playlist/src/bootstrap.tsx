@@ -8,13 +8,15 @@ import { ReactQueryDevtools } from 'react-query/devtools';
 
 const queryClient = new QueryClient();
 
+const isDevelopment = process.env.NODE_ENV === 'development';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
+      {isDevelopment ? <ReactQueryDevtools initialIsOpen={false} /> : null}
       <App />
     </QueryClientProvider>
     ,
