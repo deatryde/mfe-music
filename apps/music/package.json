@@ -20,6 +20,7 @@
     "tsconfig": "workspace:*",
     "typescript": "^4.7.3",
     "ui": "workspace:*",
+    "store": "workspace:*",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

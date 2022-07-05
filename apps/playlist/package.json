@@ -1,5 +1,5 @@
 {
-  "name": "musics",
+  "name": "playlist",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,10 +20,11 @@
     "tsconfig": "workspace:*",
     "typescript": "^4.7.3",
     "ui": "workspace:*",
+    "store": "workspace:*",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "PORT=3001 react-scripts start",
+    "dev": "SET PORT=3001 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

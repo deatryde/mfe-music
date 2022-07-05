@@ -5,7 +5,7 @@ export type Music = {
   image: string;
 };
 
-interface StoreInterface {
+export interface StoreInterface {
   musics: Music[];
   addMusic: (music: Music) => void;
 }

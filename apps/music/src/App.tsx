@@ -1,7 +1,8 @@
 import React from 'react';
 import { AppShell } from 'ui';
+import MusicPage from './pages/MusicPage';
 
-import MusicContent from './components/MusicContent';
+import PlaylistPage from './pages/PlaylistPage';
 
 const App = () => {
   return (
@@ -19,8 +20,8 @@ const App = () => {
         },
       ]}
       routes={[
-        { path: '/', element: () => <MusicContent /> },
-        { path: '/playlist', element: () => <div>Playlist</div> },
+        { path: '/', element: () => <MusicPage /> },
+        { path: '/playlist', element: () => <PlaylistPage /> },
       ]}
     />
   );
