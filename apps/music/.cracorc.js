@@ -2,6 +2,8 @@ const { ModuleFederationPlugin } = require('webpack').container;
 
 const deps = require('./package.json').dependencies;
 
+const domain = process.env.PRODUCTION_DOMAIN;
+
 module.exports = () => ({
   webpack: {
     configure: {
@@ -14,6 +16,9 @@ module.exports = () => ({
         new ModuleFederationPlugin({
           name: 'music',
           filename: 'remoteEntry.js',
+          remotes: {
+            playlist: `playlist@${domain}/playlist/latest/remoteEntry.js`,
+          },
           exposes: {
             './Music': './src/pages/MusicPage',
           },
