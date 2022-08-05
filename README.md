@@ -4,11 +4,6 @@
 The project is to implement a working micro frontend using turbo repo
 
 
-## Authors
-
-- [@irahuldogra](https://www.github.com/irahuldogra)
-
-
 ## Run Locally
 
 Clone the project
@@ -57,3 +52,7 @@ To run this project, you will need to add the following environment variables to
 To get your own api key create account on Last.fm by visiting
 
 `https://www.last.fm/api/account/create`
+## Authors
+
+- [@irahuldogra](https://www.github.com/irahuldogra)
+
