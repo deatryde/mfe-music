@@ -3,6 +3,20 @@
 
 The project is to implement a working micro frontend using turbo repo
 
+## Tech Stack
+
+**Client:** React, Zustang, React Query, Typescript, @mantine
+
+**Other:** Turbo Repo, croco
+
+## HomePage Snippet
+
+<img src="https://github.com/irahuldogra/mfe-music/blob/master/images/HomePage.PNG" alt="drawing" width="600"/>
+
+
+## PlayListPage Snippet
+
+<img src="https://github.com/irahuldogra/mfe-music/blob/master/images/PlayListPage.PNG" alt="drawing" width="600"/>
 
 ## Run Locally
 
@@ -23,23 +37,12 @@ Install dependencies
 ```bash
   npm install
 ```
-```bash
-  yarn
-```
-```bash
-  pnpm install
-```
+
 
 Start the server
 
 ```bash
   npm run dev
-```
-```bash
-  yarn dev
-```
-```bash
-  pnpm run dev
 ```
 
 
