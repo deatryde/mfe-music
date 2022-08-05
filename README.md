@@ -5,7 +5,7 @@ The project is to implement a working micro frontend using turbo repo
 
 ## Tech Stack
 
-**Client:** React, Zustang, React Query, Typescript, @mantine
+**Client:** React, Zustand, React Query, Typescript, @mantine
 
 **Other:** Turbo Repo, croco
 
