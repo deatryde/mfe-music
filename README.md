@@ -11,12 +11,12 @@ The project is to implement a working micro frontend using turbo repo
 
 ## HomePage Snippet
 
-<img src="https://github.com/irahuldogra/mfe-music/blob/master/images/HomePage.PNG" alt="drawing" width="600"/>
+<img src="https://github.com/irahuldogra/mfe-music/blob/master/images/HomePage.PNG" alt="drawing" width="auto"/>
 
 
 ## PlayListPage Snippet
 
-<img src="https://github.com/irahuldogra/mfe-music/blob/master/images/PlayListPage.PNG" alt="drawing" width="600"/>
+<img src="https://github.com/irahuldogra/mfe-music/blob/master/images/PlayListPage.PNG" alt="drawing" width="auto"/>
 
 ## Run Locally
 
